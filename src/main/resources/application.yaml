@@ -3,7 +3,11 @@ spring:
     name: SpringBootReactiveDemo
   r2dbc:
     name: ${DATABASE_NAME}
-    url: ${DATABASE_URL}
+    url: r2dbc:${DATABASE_URL}
     username: ${POSTGRESQL_USERNAME}
     password: ${POSTGRESQL_PASSWORD}
-
+  flyway:
+    user: ${FLYWAY_USERNAME}
+    password: ${FLYWAY_PASSWORD}
+    enabled: true
+    url: jdbc:${FLYWAY_URL}

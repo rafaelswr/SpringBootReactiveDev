@@ -1,4 +1,4 @@
-package com.rafaelswr.springbootreactivedemo.Model;
+package com.rafaelswr.springbootreactivedemo.model;
 
 import lombok.*;
 import lombok.extern.slf4j.Slf4j;
@@ -19,7 +19,7 @@ public class Student {
 
     @Id
     private Integer id;
-    private String name;
+    private String firstName;
     private String lastName;
 
     private LocalDate birth;
@@ -30,8 +30,8 @@ public class Student {
         return Period.between(birth,LocalDate.now()).getYears();
     }
 
-    public Student(String name, String lastName, LocalDate birth) {
-        this.name = name;
+    public Student(String firstName, String lastName, LocalDate birth) {
+        this.firstName = firstName;
         this.lastName = lastName;
         this.birth = birth;
         this.age = getAge();
