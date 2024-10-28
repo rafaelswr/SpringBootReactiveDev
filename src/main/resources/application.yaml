@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: SpringBootReactiveDemo
+  r2dbc:
+    name: ${DATABASE_NAME}
+    url: ${DATABASE_URL}
+    username: ${POSTGRESQL_USERNAME}
+    password: ${POSTGRESQL_PASSWORD}
+
